@@ -2,7 +2,7 @@
 
 A lightweight, privacy-first job application tracker that runs entirely in your browser. No accounts, no servers, no data collection.
 
-**Live:** [applyflow.pages.dev](https://applyflow.pages.dev)
+**Live:** [applyflow.black-seneca11.workers.dev](https://applyflow.black-seneca11.workers.dev)
 
 ## Features
 

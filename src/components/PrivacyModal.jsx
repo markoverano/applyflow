@@ -33,7 +33,7 @@ export function PrivacyModal({ isOpen, onClose }) {
         <section className="privacy-section">
           <h3>How It Works</h3>
           <ol>
-            <li>You open applyflow.pages.dev in your browser</li>
+            <li>You open applyflow.black-seneca11.workers.dev in your browser</li>
             <li>Your browser stores your data locally (in localStorage)</li>
             <li>When you close the tab, the data stays on your computer</li>
             <li>We never receive, process, or store any of this data</li>
