@@ -1,0 +1,135 @@
+.job-board {
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-export {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-export:hover:not(:disabled) {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.btn-export:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.board-title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .board-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+
+.board-header h1 {
+  font-size: 28px;
+  color: var(--navy);
+}
+
+.board-tagline {
+  font-size: 11px;
+  color: var(--grey);
+}
+
+.columns-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .columns-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .columns-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.btn-theme {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--grey-light);
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-theme:hover {
+  background: var(--grey-light);
+}
+
+.board-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 40px;
+  padding: 16px 0;
+  border-top: 1px solid var(--grey-light);
+  font-size: 13px;
+  color: var(--grey);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links a {
+  color: var(--grey);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--navy);
+}
+
+@media (max-width: 480px) {
+  .board-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

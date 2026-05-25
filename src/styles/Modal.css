@@ -1,0 +1,294 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.modal {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 28px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal h2 {
+  font-size: 20px;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--grey-light);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--navy);
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--navy-light);
+  box-shadow: 0 0 0 3px rgba(46, 80, 144, 0.1);
+}
+
+.form-group small {
+  display: block;
+  font-size: 11px;
+  color: var(--grey);
+  margin-top: 4px;
+  text-align: right;
+}
+
+.error {
+  display: block;
+  font-size: 12px;
+  color: var(--priority-high);
+  margin-top: 4px;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+  border-color: var(--priority-high);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  justify-content: flex-end;
+}
+
+.btn-save {
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-save:hover {
+  background: var(--navy-dark);
+}
+
+.btn-cancel {
+  background: var(--white);
+  color: var(--navy);
+  border: 1px solid var(--grey-light);
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.btn-cancel:hover {
+  background: var(--grey-light);
+}
+
+/* Confirm Dialog */
+.confirm-dialog {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 28px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.confirm-dialog p {
+  font-size: 15px;
+  color: var(--navy);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.dialog-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-confirm {
+  background: var(--priority-high);
+  color: var(--white);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-confirm:hover {
+  background: #b91c1c;
+}
+
+/* Privacy Modal */
+.privacy-modal {
+  max-width: 620px;
+}
+
+.privacy-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.privacy-modal-header h2 {
+  margin-bottom: 0;
+}
+
+.privacy-modal-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--grey);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: background 0.15s, color 0.15s;
+}
+
+.privacy-modal-close:hover {
+  background: var(--grey-light);
+  color: var(--navy);
+}
+
+.privacy-updated {
+  font-size: 12px;
+  color: var(--grey);
+  margin-bottom: 20px;
+}
+
+.privacy-section {
+  margin-bottom: 20px;
+}
+
+.privacy-section h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.privacy-section p {
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.privacy-section ul,
+.privacy-section ol {
+  padding-left: 20px;
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.8;
+}
+
+.privacy-cant-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.privacy-section code {
+  background: var(--grey-light);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: monospace;
+  color: var(--navy);
+}
+
+.privacy-note {
+  background: #fef9c3;
+  border-left: 3px solid #eab308;
+  padding: 10px 12px;
+  border-radius: 0 6px 6px 0;
+  font-size: 13px !important;
+  color: var(--navy) !important;
+  margin-top: 10px;
+}
+
+.privacy-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--grey-light);
+}
+
+/* Context Menu */
+.context-menu {
+  position: fixed;
+  background: var(--white);
+  border: 1px solid var(--grey-light);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  z-index: 200;
+  min-width: 140px;
+  overflow: hidden;
+}
+
+.context-menu-item {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  color: var(--navy);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.context-menu-item:hover {
+  background: var(--grey-light);
+}
+
+.context-menu-item--danger {
+  color: var(--priority-high);
+}
+
+.context-menu-item--danger:hover {
+  background: #fee2e2;
+}
