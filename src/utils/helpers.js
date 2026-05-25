@@ -17,6 +17,11 @@ export function getEmptyJobForm() {
     jobLink: '',
     dateApplied: '',
     interviewDate: '',
+    interviewDate2: '',
+    interviewDate3: '',
+    interviewDate4: '',
+    interviewDate5: '',
+    notes: '',
     columnId: 'todo'
   }
 }
@@ -56,14 +61,19 @@ export function exportJobsToCSV(jobs, columns) {
       : str
   }
 
-  const header = ['Job Title', 'Description', 'Apply Date', 'Interview Date', 'Link', 'Status']
+  const header = ['Job Title', 'Description', 'Apply Date', 'Interview 1', 'Interview 2', 'Interview 3', 'Interview 4', 'Interview 5', 'Link', 'Status', 'Notes']
   const rows = jobs.map(job => [
     escape(job.jobTitle),
     escape(job.description),
     escape(job.dateApplied),
     escape(job.interviewDate),
+    escape(job.interviewDate2),
+    escape(job.interviewDate3),
+    escape(job.interviewDate4),
+    escape(job.interviewDate5),
     escape(job.jobLink),
-    escape(columnMap[job.columnId] || job.columnId)
+    escape(columnMap[job.columnId] || job.columnId),
+    escape(job.notes)
   ])
 
   const csv = [header.join(','), ...rows.map(r => r.join(','))].join('\n')

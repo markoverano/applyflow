@@ -37,7 +37,6 @@
 }
 
 .drop-zone {
-  flex: 1;
   min-height: 80px;
   border-radius: 6px;
   transition: background 0.15s;

@@ -108,7 +108,7 @@ export function JobModal({ isOpen, jobToEdit, onClose, onSave }) {
           </div>
 
           <div className="form-group">
-            <label>Interview Date</label>
+            <label>Interview 1</label>
             <input
               type="date"
               name="interviewDate"
@@ -116,6 +116,59 @@ export function JobModal({ isOpen, jobToEdit, onClose, onSave }) {
               onChange={handleChange}
             />
           </div>
+
+          <div className="form-group">
+            <label>Interview 2</label>
+            <input
+              type="date"
+              name="interviewDate2"
+              value={formData.interviewDate2 || ''}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Interview 3</label>
+            <input
+              type="date"
+              name="interviewDate3"
+              value={formData.interviewDate3 || ''}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Interview 4</label>
+            <input
+              type="date"
+              name="interviewDate4"
+              value={formData.interviewDate4 || ''}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Interview 5</label>
+            <input
+              type="date"
+              name="interviewDate5"
+              value={formData.interviewDate5 || ''}
+              onChange={handleChange}
+            />
+          </div>
+
+          {(formData.columnId === 'offered' || formData.columnId === 'rejected') && (
+            <div className="form-group">
+              <label>Notes</label>
+              <textarea
+                name="notes"
+                value={formData.notes || ''}
+                onChange={handleChange}
+                rows="3"
+                placeholder="Add any notes about the outcome..."
+              />
+            </div>
+          )}
 
           <div className="form-actions">
             <button type="submit" className="btn-save">Save</button>
